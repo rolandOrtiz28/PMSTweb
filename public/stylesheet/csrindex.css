@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 320px;
+
+
+}
+
+.body1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    background: rgb(110, 173, 255);
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.jumbotron1 {
+    margin-top: 3rem;
+    display: inline-flex;
+    margin-bottom: 2rem;
+
+}
+
+.jumbotron1 .static-text1 {
+    font-size: 60px;
+    color: crimson;
+    text-transform: uppercase;
+
+}
+
+.body1 .dynamic-text1 {
+    height: 80px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-text1 li {
+    color: whitesmoke;
+    background: none;
+    list-style: none;
+    font-size: 80px;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+
+}
+
+
+.dynamic-text1 li span {
+    top: -8px;
+    position: relative;
+}
+
+.dynamic-text1 li span::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(110, 173, 255);
+    border-left: 4px solid rgb(110, 173, 255);
+    animation: typing 1.5s steps(15) infinite;
+
+}
+
+@keyframes typing {
+    100% {
+        left: 110%;
+        margin: 0 -35px 0 35px;
+    }
+
+}
+
+
+
+.card-content {
+    /* margin-top: 25%; */
+    /* width: 100%; */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.card-main {
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 0 15vh;
+    position: relative;
+
+
+}
+
+.card-main .card-container {
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-width: 300px;
+    margin-top: 5rem;
+}
+
+.pagination {
+    margin-top: 5rem;
+    background: transparent;
+
+}
+
+
+
+.banner-container {
+    top: 1px;
+    left: 0;
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    z-index: -100;
+
+}
+
+.banner-container img {
+
+    z-index: -99;
+    width: 100%;
+    height: 320px;
+}
+
+@media(max-width:768px) {
+    .jumbotron1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jumbotron1 .static-text1 {
+        font-size: 30px;
+    }
+
+    .dynamic-text1 li {
+        font-size: 50px;
+
+    }
+
+    .dynamic-text1 li span::after {
+        top: -100px;
+        width: 500px;
+        height: 200px;
+    }
+
+
+
+}

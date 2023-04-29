@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Medical</title>
+    <script src="https://cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include('../partials/flash') %>
+        <div class="container mb-4">
+            <div class="row d-flex flex-lg-row mt-5">
+                <h1 class="text-center">New Csr</h1>
+                <div class="card">
+                    <form action="/csr" method="POST" enctype="multipart/form-data">
+                        <div class="form-group mt-5">
+                            <label class="form-label" for="title">title</label>
+                            <input class="form-control" type="text" id="title" name="csr[title]">
+                        </div>
+                        <div class="card-body">
+                            <label for="description">description</label>
+                            <textarea type="text" id="content" cols="50" rows="20" name="csr[description]"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="formFileMultiple" class="form-label">Choose an image</label>
+                                <input class="form-control" type="file" id="image" name="image" multiple>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Sub-Description</span>
+                            <textarea name="csr[subDescription]" id="subDescription" class="form-control"
+                                aria-label="Sub-Description"></textarea>
+                        </div>
+
+
+
+                        <button class="btn btn-secondary mt-2">Add CSR</button>
+
+                    </form>
+                    <div>
+                        <a class="btn btn-secondary mt-2 mb-4" href="/csr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <script>
+
+            window.addEventListener('load', function () {
+                // CKEDITOR.replace('content');
+                CKEDITOR.replace('content', {
+                    removePlugins: 'exportpdf',
+                });
+                removeLoading();
+            });
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>

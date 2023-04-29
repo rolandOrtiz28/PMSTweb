@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    border: 0;
+
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 158, 158)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.product-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    margin: 40px;
+    padding: 0;
+}
+
+.product-card {
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 20px;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(10px);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 158, 158, 1));
+    transition: 0.5s all;
+    transform: translateY(100%);
+}
+
+.product-card:hover:before {
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+    z-index: -1;
+
+}
+
+.product-card .info {
+    text-align: center;
+    transition: 0.5s all;
+    transform: translateY(120%);
+    z-index: 2;
+}
+
+.product-card:hover .info {
+    transform: translateY(0);
+
+}
+
+.product-card .info h1 {
+    font-weight: 900;
+}
+
+.product-card .info p {
+    font-weight: 700;
+}
+
+.btn1 {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+}
+
+.btn1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn1:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn1::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    transition: all .4s;
+}
+
+.btn1::after {
+    background-color: #0c3cfb4b;
+}
+
+/* .btn1:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+} */

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(255, 158, 158)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.team {
+    width: 100%;
+    height: 400px;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px;
+
+}
+
+
+.team h1 {
+
+
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 50px;
+    color: #fff;
+    text-shadow: crimson 2px 5px;
+    letter-spacing: 10px;
+    margin-bottom: 20px
+}
+
+
+
+.team p {
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 150;
+
+    line-height: 23px;
+    color: #666666;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+
+}
+
+.main {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container1 {
+    position: relative;
+    margin: 80px auto;
+    width: 700px;
+    height: 700px;
+    margin-top: 100px;
+    margin-bottom: 5rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.container1 .icon {
+    position: relative;
+    left: -350px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container1 .icon .imgBx {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 4px #2f89ff,
+        0 0 0 4px #fff;
+    transform: rotate(calc(360deg/13 * var(--i)));
+    transform-origin: 390px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.container1 .icon .imgBx.active {
+    box-shadow: 0 0 0 4px #fff,
+        0 0 0 10px crimson;
+}
+
+.container1 .icon .imgBx img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/13 * var(--i)));
+    transition: 0.5s;
+    filter: grayscale(1);
+}
+
+.container1 .icon .imgBx.active img {
+    filter: grayscale(0);
+
+}
+
+.content {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    inset: 90px;
+    border: 4px solid transparent;
+    border-left: 5px solid #092dfc;
+    border-right: 5px solid crimson;
+    border-radius: 50%;
+    animation: animate_01 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate_01 {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.content::after {
+    content: '';
+    position: absolute;
+    inset: 130px;
+    border: 4px solid transparent;
+    border-left: 5px solid crimson;
+    border-right: 5px solid #092dfc;
+    border-radius: 50%;
+    animation: animate_02 2.5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate_02 {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+
+.contentBx {
+    position: absolute;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBx.active {
+    transform: scale(0.4);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.contentBx .card1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.contentBx .card1 .imgBx {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contentBx .card1 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentBx .card1 .imgBx .ian {
+    left: -50px;
+}
+
+.contentBx .card1 .textBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contentBx .card1 .textBx h2 {
+    position: relative;
+    font-size: 2.25em;
+    font-weight: 600;
+    color: #1f1f1f;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+}
+
+.contentBx .card1 .textBx span {
+    font-size: 1.8em;
+    color: crimson;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+}
+
+
+@media (max-width: 768px) {
+    .team h1 {
+        font-size: 2rem;
+    }
+
+    .team p {
+        width: auto;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .container1 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .container1 .icon .imgBx {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container1 .icon .imgBx {
+        transform-origin: 210px;
+        left: 335px;
+        z-index: 1;
+    }
+
+    .content::before {
+        inset: 40px;
+    }
+
+    .content::after {
+        inset: 60px;
+    }
+
+    .contentBx .card1 .imgBx {
+        width: 300px;
+        height: 400px;
+    }
+
+    .contentBx .card1 .textBx h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .contentBx .card1 .textBx span {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Medical</title>
+
+    <link rel="stylesheet" href="/stylesheet/home.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Lora:wght@700&family=Montserrat:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="home-container" id="particles-js">
+        <nav class="home-navbar">
+
+            <img src="images/logo.png" class="logo" alt="">
+
+            <input type="checkbox" class="myCheckBox" name="" id="myCheck">
+            <label for="myCheck" class="checkbtn"><i class="fa fa-bars"></i> </label>
+            <ul>
+                <li><a class="nav-link" id="link1" href="#">HOME</a></li>
+                <li><a class="nav-link" id="link2" href="/articles">BLOGS</a></li>
+
+                <li><a class="nav-link" id="link4" href="/services">SERVICES</a></li>
+                <li><a class="nav-link" id="link5" href="/team">OUR TEAM</a></li>
+
+            </ul>
+
+            <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#contactModal"><img
+                    src="https://img.icons8.com/ios-glyphs/256/phone-disconnected.png" alt="">Contact Us!</button>
+        </nav>
+
+
+
+        <div class="home-content">
+            <div class="bgcontent">
+                <h1>Paula Medical</h1>
+                <h2>Supply & Trading</h2>
+                <p>Paula Medical Supply & Trading is a company that specializes in the distribution of medical
+                    equipment, vaccination, generic and branded medicines, maintenance, and emergency kits. We are based
+                    in Region 8 and our services are primarily focused on distributing medical supplies to hospitals,
+                    clinics, and other healthcare facilities in this region. Our goal is to provide high-quality medical
+                    supplies and equipment to healthcare providers in the region, helping to ensure that patients have
+                    access to the care they need.
+
+
+
+                    <a href="/articles" class="home-learnbtn">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/articles/send" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <footer class="mt-autho text-white-50">
+        <p>&copy; 2023 Ortiz</p>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+
+
+</html>

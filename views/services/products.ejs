@@ -1,0 +1,151 @@
+<%- layout('/layouts/boilerplate') %>
+
+    <!-- css links -->
+    <link rel="stylesheet" href="/stylesheet/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Anton&family=Heebo&family=Kanit:ital,wght@1,200&family=Lato&family=Lora:wght@700&family=Montserrat:ital,wght@0,100;1,500&family=Noto+Sans+JP:wght@200&family=Raleway:ital,wght@1,500&family=Roboto+Mono&family=Signika+Negative:wght@500&family=Sofia+Sans+Condensed:wght@200&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <body>
+
+        <div class="product-container">
+            <div class="wrapper">
+                <div class="product-card">
+                    <img src="images/ek.png" alt="">
+                    <div class="info">
+                        <h1>Emergency Kit</h1>
+                        <p>Be Prepared for Anything: Keep an Emergency Kit on Hand</p>
+                        <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Order
+                            Now!!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/hb.png" alt="">
+                    <div class="info">
+                        <h1>Hospital Bed</h1>
+                        <p>Rest and Recovery: The Comfort of a Hospital Bed</p>
+                        <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Order
+                            Now!!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/wheel.png" alt="">
+                    <div class="info">
+                        <h1>Wheel Chair</h1>
+                        <p>Mobility and Independence: The Freedom of a Wheelchair</p>
+                        <button class="btn1"> Order Now!!
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/medi.png" alt="">
+                    <div class="info">
+                        <h1>Medicines</h1>
+                        <p>Prescription for Health: Essential Medicines for Your Well-being</p>
+                        <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Order
+                            Now!!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/neb.png" alt="">
+                    <div class="info">
+                        <h1>Nebulizer</h1>
+                        <p>Breathing Easier: The Benefits of a Nebulizer for Respiratory Health</p>
+                        <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Order
+                            Now!!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/vac.png" alt="">
+                    <div class="info">
+                        <h1>Vaccine</h1>
+                        <p>Protection for You and Others: Vaccines Save Lives</p>
+                        <button class="btn1"> Order Now!!
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/7.png" alt="">
+                    <div class="info">
+                        <h1>Mask</h1>
+                        <p>Mask up, stay safe! Wearing a mask is still crucial in preventing the spread of COVID-19.
+                        </p>
+                        <button class="btn1"> Order Now!!
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/8.png" alt="">
+                    <div class="info">
+                        <h1>Alcohol</h1>
+                        <p>Drink responsibly, stay safe! Remember to always consume alcohol in moderation and never
+                            drink and drive.</p>
+                        <button class="btn1"> Order Now!!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/articles/send" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- java script links -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    </body>

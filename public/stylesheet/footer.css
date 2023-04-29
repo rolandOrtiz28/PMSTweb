@@ -1,0 +1,55 @@
+.foot {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(255, 158, 158)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+
+
+}
+
+.foot a {
+    text-decoration: none;
+    color: white;
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.532);
+
+}
+
+.text .pmst {
+    font-size: 20px;
+    font-weight: 50px;
+    text-shadow: rgb(255, 0, 0) 3px 0 20px;
+
+}
+
+.em a {
+    margin-left: 1rem;
+    color: rgba(255, 255, 255, 0.532);
+}
+
+.social-links {
+    padding-right: 3rem;
+    font-size: 20px;
+
+}
+
+.email {
+    cursor: pointer;
+}
+
+.cc {
+    color: dimgrey;
+    opacity: 0.3;
+
+}
+
+@media (max-width:768px) {
+    .accordion-item .accordion-header .investment-img {
+        width: 100px;
+
+    }
+
+}

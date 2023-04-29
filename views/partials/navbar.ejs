@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheet/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Anton&family=Heebo&family=Kanit:ital,wght@1,200&family=Lato&family=Lora:wght@700&family=Montserrat:wght@400&family=Noto+Sans+JP:wght@200&family=Raleway:ital,wght@1,500&family=Roboto+Mono&family=Signika+Negative:wght@500&family=Sofia+Sans+Condensed:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="image">
+            <a href=""><img class="logo" src="/images/logo.png" alt=""></a>
+        </div>
+        <div class="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navMenu">
+            <li class="home"><a href="/">HOME</a></li>
+
+            <li class="dropdown"><a href="#">BLOGS<ion-icon class="icon" name="chevron-down-outline"></ion-icon></a>
+                <ul class="drop-items">
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/csr">Company Social Program</a></li>
+                </ul>
+            </li>
+            <li><a href="/team">OUR TEAM</a></li>
+            <li class="dropdown2"><a href="#">SERVICES<ion-icon class="icon" name="chevron-down-outline"></ion-icon></a>
+                <ul class="drop-items2">
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/services">What we offer</a></li>
+
+                </ul>
+            </li>
+
+            <% if(currentUser) {%>
+                <li><a href="/logout">LOG OUT</a></li>
+                <% } %>
+        </ul>
+
+    </nav>
+
+
+    <script>
+        const menuToggle = document.querySelector('.menuToggle')
+        const navMenu = document.querySelector('.navMenu')
+        const dropDown2 = document.querySelector('.dropdown2');
+        const dropItems2 = document.querySelector('.drop-items2')
+
+        const dropDown = document.querySelector('.dropdown');
+        const dropItems = document.querySelector('.drop-items')
+
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+
+        dropDown.addEventListener('click', () => {
+            dropItems.classList.toggle("active");
+            if (dropItems2.classList.contains('active')) {
+                dropItems2.classList.remove('active');
+            }
+        });
+
+        dropDown2.addEventListener('click', () => {
+            dropItems2.classList.toggle("active");
+            if (dropItems.classList.contains('active')) {
+                dropItems.classList.remove('active');
+            }
+        });
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
