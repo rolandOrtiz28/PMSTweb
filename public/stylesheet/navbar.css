@@ -145,7 +145,6 @@
 }
 
 
-
 @media screen and (max-width:768px) {
     .menuToggle {
         display: block;
@@ -165,7 +164,7 @@
 
     .navMenu {
         position: relative;
-        left: 10%;
+        left: 45%;
         gap: 0;
         top: -56px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -228,4 +227,12 @@
 
 
 
+}
+
+@media screen and (max-width:460px) {
+
+    .navMenu {
+        left: 15%;
+
+    }
 }
