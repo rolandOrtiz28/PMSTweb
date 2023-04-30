@@ -118,33 +118,29 @@
     /* margin: 5% 5rem 10rem 1rem; */
     color: #fff;
     max-width: 800px;
-}
-
-.bgcontent {
-
-    width: 100%;
-    height: 500px;
     flex: 1 1 1;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 3rem 2rem .5rem 2rem;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: start;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    z-index: -89;
-
-
-
+    margin-top: 50px;
 }
+
+
 
 
 .home-content h1 {
     font-size: 90px;
     font-weight: 70px;
     line-height: 85px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 
 }
 
@@ -158,9 +154,9 @@
 .home-content p {
     font-size: 15px;
     font-weight: 500px;
-    line-height: 25px;
+    line-height: 20px;
     color: rgb(255, 255, 255);
-    margin: 0 40px 5px 5px;
+    margin: 0 40px 10px 5px;
 }
 
 .home-learnbtn {
@@ -177,7 +173,7 @@
     text-transform: uppercase;
     outline: 0;
     border: 0;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin-top: 1rem;
 
 }
@@ -288,26 +284,30 @@
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
 
     .home-content {
-
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem 1rem;
+        text-align: start;
+        max-width: 100%;
     }
 
-    .bgcontent {
-        height: 500px;
+    .home-content h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
 
+    .home-content h2 {
+        font-size: 36px;
+        line-height: 40px;
     }
 
     .home-content p {
-
-        width: 100%;
-        font-size: .8em;
-
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 10px 20px 10px;
     }
 
 
@@ -322,24 +322,22 @@
         margin-left: -250px;
 
     }
+}
 
+@media screen and (max-width: 480px) {
     .home-content h1 {
-        font-size: 60px;
-        font-weight: 40px;
-        line-height: 50px;
+        font-size: 36px;
+        line-height: 48px;
     }
 
     .home-content h2 {
-        font-size: 40px;
-        font-weight: 30px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 36px;
     }
 
-    .home-learnbtn {
-        position: relative;
-        font-size: 10px;
-        top: -27px;
-        left: 0;
+    .home-content p {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 0 5px 20px 5px;
     }
-
 }
