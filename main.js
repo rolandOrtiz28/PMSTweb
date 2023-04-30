@@ -110,7 +110,12 @@ const connectSrcUrls = [
     "https://unpkg.com/",
 
 ];
-const fontSrcUrls = [];
+const fontSrcUrls = [
+    "https://ionic.io/ionicons/",
+    "https://fonts.gstatic.com/",
+    "https://cdnjs.cloudflare.com/",
+
+];
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
@@ -136,7 +141,7 @@ app.use(
 
 
             ],
-            fontSrc: ["'self'", "https://ionic.io/ionicons/", "https://fonts.gstatic.com/", ...fontSrcUrls],
+            fontSrc: ["'self'", "'<URL>'", ...fontSrcUrls],
         },
     })
 );
