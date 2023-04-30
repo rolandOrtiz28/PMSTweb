@@ -57,7 +57,7 @@ const secret = process.env.PMST_SECRET
 
 const sessionConfig = {
     name: '_mgSoad',
-    secret,
+    secret: secret,
     resave: false,
     saveUninitialized: true,
     store: MongoDBStore.create({
