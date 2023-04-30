@@ -145,6 +145,7 @@
 }
 
 
+
 @media screen and (max-width:768px) {
     .menuToggle {
         display: block;
@@ -163,10 +164,10 @@
     }
 
     .navMenu {
-        position: absolute;
-        left: 50%;
+        position: relative;
+        left: 10%;
         gap: 0;
-        top: 80px;
+        top: -56px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
@@ -226,62 +227,5 @@
     }
 
 
-
-}
-
-
-
-
-@media screen and (max-width:465px) {
-    .navMenu {
-        left: 15%
-    }
-}
-
-
-
-@media screen and (max-width:395px) {
-    .navMenu {
-        left: 5%;
-    }
-}
-
-@media screen and (max-width:280px) {
-    .navMenu {
-        top: 100px;
-        justify-content: start;
-        align-items: start;
-    }
-
-    .navMenu.active {
-        width: 100%;
-        transform: scale(1.1);
-    }
-
-    .drop-items2 {
-
-        left: 50px;
-        display: flex;
-        justify-content: start;
-        align-items: start;
-
-
-
-    }
-
-    .drop-items {
-        left: 30px;
-        display: flex;
-        justify-content: start;
-        align-items: start;
-    }
-
-    .navMenu .dropdown2 .icon {
-        left: 100%;
-    }
-
-    .navMenu .dropdown .icon {
-        left: 100%;
-    }
 
 }
