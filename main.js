@@ -53,11 +53,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize());
 
 
-const secret = process.env.PMST_SECRET
+
 
 const sessionConfig = {
+    secret: process.env.PMST_SECRET,
     name: '_mgSoad',
-    secret: secret,
     resave: false,
     saveUninitialized: true,
     store: MongoDBStore.create({
