@@ -56,7 +56,7 @@ app.use(mongoSanitize());
 
 
 const sessionConfig = {
-    secret: process.env.PMST_SECRET,
+    secret: 'thisisasecret',
     name: '_mgSoad',
     resave: false,
     saveUninitialized: true,
