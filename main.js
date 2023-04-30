@@ -134,8 +134,9 @@ app.use(
                 "cdn.ckeditor.com",
 
 
+
             ],
-            fontSrc: ["'self'", "https://ionic.io/ionicons/", ...fontSrcUrls],
+            fontSrc: ["'self'", "https://ionic.io/ionicons/", "https://fonts.gstatic.com/", ...fontSrcUrls],
         },
     })
 );
