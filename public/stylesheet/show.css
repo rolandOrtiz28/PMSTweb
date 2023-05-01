@@ -17,17 +17,13 @@ body {
 
 }
 
-.flash {
-    width: 100%;
-    height: 10vh;
-    margin-left: 2rem;
-}
+
 
 .navigation {
     position: fixed;
     /* inset: 130px 0 150px 10px; */
     width: 100px;
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(135deg, rgba(145, 15, 41, 0.519), rgba(255, 255, 255, 0));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -210,4 +206,10 @@ body {
 .carousel-inner .carousel-item .img-fluid {
     width: 1200px;
     height: 700px;
+}
+
+section .button {
+    color: aqua;
+    background: transparent;
+    border: none;
 }
