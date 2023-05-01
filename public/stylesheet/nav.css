@@ -1,0 +1,25 @@
+.navbar {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(255, 158, 158));
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.navbar-nav .dropdown .dropdown-menu {
+    background-color: transparent;
+    border: none;
+
+}
+
+.navbar-nav .dropdown .dropdown-menu li a {
+
+    background-color: transparent;
+}
+
+.navbar-nav .dropdown .dropdown-menu li a:hover {
+
+    background-color: rgba(220, 20, 60, 0.211);
+    border-radius: 10px 0;
+}
