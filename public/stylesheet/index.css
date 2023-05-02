@@ -121,16 +121,45 @@ header .contact:hover {
 
 }
 
-@media(max-width:1000px) {}
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
+    body {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
 
-    header .contact {
-        width: 200px;
-        top: 73%;
-        left: 35%;
-        font-size: 10px;
     }
 
+    header {
+        border: none;
+    }
 
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .jumbotron h1 {
+        font-size: 45px;
+    }
+
+    .banner-container {
+
+        height: 200px;
+    }
+
+    .banner-container img {
+        height: 350px;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .card-text {
+        font-size: 12px;
+    }
 }

@@ -17,6 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
     <!-- products -->
     <link rel="stylesheet" href="/stylesheet/product.css">
@@ -37,179 +39,49 @@
 </head>
 
 <body>
-    <div class="home-container" id="particles-js">
-        <nav class="home-navbar">
+    <section class="home-section">
+        <div class="home-container" id="particles-js">
+            <nav class="home-navbar">
 
-            <img src="images/Logo.png" class="logo" alt="">
+                <img src="images/Logo.png" class="logo" alt="">
 
-            <input type="checkbox" class="myCheckBox" name="" id="myCheck">
-            <label for="myCheck" class="checkbtn"><i class="fa fa-bars"></i> </label>
-            <ul>
-                <li><a class="home-links" id="link1" href="#">HOME</a></li>
-                <li><a class="home-links" id="link2" href="/articles">BLOGS</a></li>
+                <input type="checkbox" class="myCheckBox" name="" id="myCheck">
+                <label for="myCheck" class="checkbtn"><i class="fa fa-bars"></i> </label>
+                <ul>
+                    <li><a class="home-links" id="link1" href="#">HOME</a></li>
+                    <li><a class="home-links" id="link2" href="/articles">BLOGS</a></li>
 
-                <li><a class="home-links" id="link4" href="/services">SERVICES</a></li>
-                <li><a class="home-links" id="link5" href="/team">OUR TEAM</a></li>
+                    <li><a class="home-links" id="link4" href="/services">SERVICES</a></li>
+                    <li><a class="home-links" id="link5" href="/team">OUR TEAM</a></li>
 
-            </ul>
+                </ul>
 
-            <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#contactModal"><img
-                    src="https://img.icons8.com/ios-glyphs/256/phone-disconnected.png" alt="">Contact Us!</button>
-        </nav>
-
-
-
-        <div class="home-content">
-            <div class="bgcontent">
-                <h1>Paula Medical</h1>
-                <h2>Supply & Trading</h2>
-                <p>Paula Medical Supply & Trading is a company that specializes in the distribution of medical
-                    equipment, vaccination, generic and branded medicines, maintenance, and emergency kits. We are based
-                    in Region 8 and our services are primarily focused on distributing medical supplies to hospitals,
-                    clinics, and other healthcare facilities in this region. Our goal is to provide high-quality medical
-                    supplies and equipment to healthcare providers in the region, helping to ensure that patients have
-                    access to the care they need.
+                <button class="nav-btn" data-bs-toggle="modal" data-bs-target="#contactModal"><img
+                        src="https://img.icons8.com/ios-glyphs/256/phone-disconnected.png" alt="">Contact Us!</button>
+            </nav>
 
 
 
-                    <a href="/articles" class="home-learnbtn">Learn more</a>
-            </div>
-        </div>
-    </div>
+            <div class="home-content">
+                <div class="bgcontent">
+                    <h1>Paula Medical</h1>
+                    <h2>Supply & Trading</h2>
+                    <p>Paula Medical Supply & Trading is a company that specializes in the distribution of medical
+                        equipment, vaccination, generic and branded medicines, maintenance, and emergency kits. We are
+                        based
+                        in Region 8 and our services are primarily focused on distributing medical supplies to
+                        hospitals,
+                        clinics, and other healthcare facilities in this region. Our goal is to provide high-quality
+                        medical
+                        supplies and equipment to healthcare providers in the region, helping to ensure that patients
+                        have
+                        access to the care they need.
 
 
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="/articles/send" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
+
+                        <a href="/articles" class="home-learnbtn">Learn more</a>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <section class="product-section">
-        <div class="product-container">
-            <h1 class="h1 text-center px-lg-5">PRODUCTS</h1>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="product-card">
-                        <img src="images/ek.png" alt="">
-                        <div class="info">
-                            <h2>Emergency Kit</h2>
-                            <p>Be Prepared for Anything: Keep an Emergency Kit on Hand</p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/hb.png" alt="">
-                        <div class="info">
-                            <h2>Hospital Bed</h2>
-                            <p>Rest and Recovery: The Comfort of a Hospital Bed</p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/wheel.png" alt="">
-                        <div class="info ">
-                            <h2>Wheel Chair</h2>
-                            <p>Mobility and Independence: The Freedom of a Wheelchair</p>
-                            <button class="btn1"> Order Now!!
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/medi.png" alt="">
-                        <div class="info ">
-                            <h2>Medicines</h2>
-                            <p>Prescription for Health: Essential Medicines for Your Well-being</p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/neb.png" alt="">
-                        <div class="info ">
-                            <h2>Nebulizer</h2>
-                            <p>Breathing Easier: The Benefits of a Nebulizer for Respiratory Health</p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="images/vac.png" alt="">
-                        <div class="info ">
-                            <h2>Vaccine</h2>
-                            <p>Protection for You and Others: Vaccines Save Lives</p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/7.png" alt="">
-                        <div class="info ">
-                            <h2>Mask</h2>
-                            <p>Mask up, stay safe! Wearing a mask is still crucial in preventing the spread of COVID-19.
-                            </p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/8.png" alt="">
-                        <div class="info ">
-                            <h2>Alcohol</h2>
-                            <p>Drink responsibly, stay safe! Remember to always consume alcohol in moderation and never
-                                drink and drive.</p>
-                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                Order
-                                Now!!
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
 
@@ -244,7 +116,154 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="product-section" id="product-section">
+        <div id="product-section" class="product-container">
+            <div class="product-container">
+                <h1 class="h1 text-center px-lg-5">PRODUCTS</h1>
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="product-card">
+                            <img src="images/ek.png" alt="">
+                            <div class="info">
+                                <h2>Emergency Kit</h2>
+                                <p>Be Prepared for Anything: Keep an Emergency Kit on Hand</p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
 
+                        <div class="product-card">
+                            <img src="images/hb.png" alt="">
+                            <div class="info">
+                                <h2>Hospital Bed</h2>
+                                <p>Rest and Recovery: The Comfort of a Hospital Bed</p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="images/wheel.png" alt="">
+                            <div class="info ">
+                                <h2>Wheel Chair</h2>
+                                <p>Mobility and Independence: The Freedom of a Wheelchair</p>
+                                <button class="btn1"> Order Now!!
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/medi.png" alt="">
+                            <div class="info ">
+                                <h2>Medicines</h2>
+                                <p>Prescription for Health: Essential Medicines for Your Well-being</p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="images/neb.png" alt="">
+                            <div class="info ">
+                                <h2>Nebulizer</h2>
+                                <p>Breathing Easier: The Benefits of a Nebulizer for Respiratory Health</p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="images/vac.png" alt="">
+                            <div class="info ">
+                                <h2>Vaccine</h2>
+                                <p>Protection for You and Others: Vaccines Save Lives</p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/7.png" alt="">
+                            <div class="info ">
+                                <h2>Mask</h2>
+                                <p>Mask up, stay safe! Wearing a mask is still crucial in preventing the spread of
+                                    COVID-19.
+                                </p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/8.png" alt="">
+                            <div class="info ">
+                                <h2>Alcohol</h2>
+                                <p>Drink responsibly, stay safe! Remember to always consume alcohol in moderation and
+                                    never
+                                    drink and drive.</p>
+                                <button class="btn1" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal">
+                                    Order
+                                    Now!!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/articles/send" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -585,6 +604,33 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+    <script>
+        // Fade in the first section on page load
+        gsap.from(".home-section", { opacity: 0, duration: 2 });
+    </script>
+    <script>
+        // select the product section
+        const productSection = document.querySelector('#product-section');
+
+        // create a timeline for the animation
+        const productAnim = gsap.timeline({
+            scrollTrigger: {
+                trigger: productSection, // target the product section
+                start: 'top bottom', // start the animation when the bottom of the section reaches the top of the viewport
+            }
+        });
+
+        // add animation to each product card
+        productAnim.from('.product-card', {
+            opacity: 0,
+            y: 50,
+            stagger: 0.2, // stagger the animation for each card
+        });
+
+    </script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);</script>
 
 </body>
 

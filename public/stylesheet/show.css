@@ -213,3 +213,26 @@ section .button {
     background: transparent;
     border: none;
 }
+
+.container-fluid img {
+    width: 750px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-fluid .title {
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .container-fluid .date {
+        font-size: 10px;
+    }
+
+    .container-fluid img {
+        width: 400px;
+
+    }
+
+
+
+}
