@@ -8,7 +8,7 @@
 
 body {
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -33,14 +33,14 @@ body {
 
 .jumbotron h1 {
     font-size: 80px;
-    text-shadow: crimson 1px 0 10px;
-    color: antiquewhite;
+    color: #5c5c5c;
+    text-shadow: rgb(255, 255, 255) 2px 5px;
     animation: slidein .8s linear 1s infinite alternate;
 }
 
 @keyframes slidein {
     0% {
-        transform: scale(0);
+        transform: scale(.5);
     }
 
     100% {
@@ -82,23 +82,17 @@ body {
 
 
 .banner-container {
-    top: -30px;
-    left: 0;
+
     width: 100%;
     min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    z-index: -100;
-
 }
 
 .banner-container img {
-    position: fixed;
     z-index: -99;
     width: 100%;
-
     height: 500px;
 
 }

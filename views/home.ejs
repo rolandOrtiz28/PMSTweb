@@ -17,6 +17,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+
+    <!-- products -->
+    <link rel="stylesheet" href="/stylesheet/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <!-- footer -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheet/footer.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <!-- services -->
+    <link rel="stylesheet" href="/stylesheet/services.css">
 </head>
 
 <body>
@@ -28,11 +45,11 @@
             <input type="checkbox" class="myCheckBox" name="" id="myCheck">
             <label for="myCheck" class="checkbtn"><i class="fa fa-bars"></i> </label>
             <ul>
-                <li><a class="nav-link" id="link1" href="#">HOME</a></li>
-                <li><a class="nav-link" id="link2" href="/articles">BLOGS</a></li>
+                <li><a class="home-links" id="link1" href="#">HOME</a></li>
+                <li><a class="home-links" id="link2" href="/articles">BLOGS</a></li>
 
-                <li><a class="nav-link" id="link4" href="/services">SERVICES</a></li>
-                <li><a class="nav-link" id="link5" href="/team">OUR TEAM</a></li>
+                <li><a class="home-links" id="link4" href="/services">SERVICES</a></li>
+                <li><a class="home-links" id="link5" href="/team">OUR TEAM</a></li>
 
             </ul>
 
@@ -93,8 +110,475 @@
         </div>
     </div>
 
+    <section class="product-section">
+        <div class="product-container">
+            <h1 class="h1 text-center px-lg-5">PRODUCTS</h1>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="product-card">
+                        <img src="images/ek.png" alt="">
+                        <div class="info">
+                            <h2>Emergency Kit</h2>
+                            <p>Be Prepared for Anything: Keep an Emergency Kit on Hand</p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/hb.png" alt="">
+                        <div class="info">
+                            <h2>Hospital Bed</h2>
+                            <p>Rest and Recovery: The Comfort of a Hospital Bed</p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/wheel.png" alt="">
+                        <div class="info ">
+                            <h2>Wheel Chair</h2>
+                            <p>Mobility and Independence: The Freedom of a Wheelchair</p>
+                            <button class="btn1"> Order Now!!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/medi.png" alt="">
+                        <div class="info ">
+                            <h2>Medicines</h2>
+                            <p>Prescription for Health: Essential Medicines for Your Well-being</p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/neb.png" alt="">
+                        <div class="info ">
+                            <h2>Nebulizer</h2>
+                            <p>Breathing Easier: The Benefits of a Nebulizer for Respiratory Health</p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/vac.png" alt="">
+                        <div class="info ">
+                            <h2>Vaccine</h2>
+                            <p>Protection for You and Others: Vaccines Save Lives</p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/7.png" alt="">
+                        <div class="info ">
+                            <h2>Mask</h2>
+                            <p>Mask up, stay safe! Wearing a mask is still crucial in preventing the spread of COVID-19.
+                            </p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/8.png" alt="">
+                        <div class="info ">
+                            <h2>Alcohol</h2>
+                            <p>Drink responsibly, stay safe! Remember to always consume alcohol in moderation and never
+                                drink and drive.</p>
+                            <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Order
+                                Now!!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/articles/send" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="timeline">
+            <h1 class="title">What we offer</h1>
+            <div class="service-content">
+                <div class="service-container right-container">
+                    <img src="images/WC.png" alt="">
+                    <div class="text-box">
+                        <h2>Medical Supplies</h2>
+                        <p>provision of various medical tools and equipment that are essential for proper diagnosis and
+                            treatment of patients. Medical equipment can range from simple devices like stethoscopes and
+                            blood pressure monitors to more complex equipment such as MRI machines, ventilators, and
+                            dialysis machines.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+
+                <div class="service-container left-container">
+                    <img src="images/vaccine.png" alt="">
+                    <div class="text-box">
+                        <h2>Vaccines</h2>
+                        <p>Vaccination is a process of administering vaccines to individuals in order to protect them
+                            from a
+                            particular disease. Vaccines stimulate the immune system to produce antibodies that provide
+                            immunity against specific diseases, and this helps to prevent the spread of diseases in
+                            populations.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="service-container right-container">
+                    <img src="images/med.png" alt="">
+                    <div class="text-box">
+                        <h2>Regulated Drugs</h2>
+                        <p>Regulated Drugs can be classified into two categories - generic and branded. Generic
+                            medicines
+                            are
+                            identical copies of branded medicines that have the same active ingredients, dosage,
+                            strength,
+                            and intended use. Branded medicines, on the other hand, are developed and marketed by
+                            pharmaceutical companies and have unique names, packaging, and formulations.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="service-container left-container">
+                    <img src="images/maintain.png" alt="">
+                    <div class="text-box">
+                        <h2>Beauty & Wellness</h2>
+                        <p>Beauty & Wellness is a multi-faceted industry that encompasses everything from skincare and
+                            makeup to fitness and mental health. In today's fast-paced world, people are increasingly
+                            looking for ways to maintain a healthy lifestyle and feel their best, both physically and
+                            mentally.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="service-container right-container">
+                    <img src="images/emergency.png" alt="">
+                    <div class="text-box">
+                        <h2>Emergency kits</h2>
+                        <p>Emergency kits are pre-packaged sets of medical supplies and equipment that are designed to
+                            provide critical care during emergency situations such as natural disasters, accidents, or
+                            terrorist attacks. Emergency kits can include items such as bandages, antiseptics, splints,
+                            defibrillators, and other life-saving equipment.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <footer class="text-center text-lg-start bg-white text-muted foot">
+
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+            <div class="me-5 d-none d-lg-block text">
+                <span>Get connected with us on social networks:</span>
+            </div>
+
+
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/paulamedicalst" class="me-4 link-light text">
+                    <ion-icon class="me-3 em" name="logo-facebook"></ion-icon>
+                </a>
+
+                <a href="https://www.instagram.com/paula_medical/" class="me-4 link-light text">
+                    <ion-icon class="me-3 em" name="logo-instagram"></ion-icon>
+
+                </a>
+
+
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="text">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text">
+                            <i class="fa fa-gem me-3 pmst">Paula Medical Supply & Trading</i>
+                        </h6>
+                        <p class="text-center">
+                            Medicine and Medical Supplies Distributor in Region 8
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" data-toggle="modal" data-target="#exampleModalCenter"
+                                class="footer-links">FAQS</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="footer-links" data-toggle="modal" data-target="#exampleModal">Terms &
+                                Condition</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p class="text"><ion-icon class="me-3 em" name="home-outline"></ion-icon> DR 1 RL Commercial
+                            Bldg.
+                            Calanipawan Road
+                            Tacloban City</p>
+                        <p class="text email" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            sales@paulamedicalsupplytrading.com
+                        </p>
+                        <p class="text"><ion-icon class="me-3 em" name="call-outline"></ion-icon> +63 981 429 0778</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">FAQs</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-md-start">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What payment methods do you accept?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>The paymen methods we accept are</strong> Gcash, Metrobank, PNB, and
+                                        Landbank.<br><br>
+                                        We also accept:<br><br>
+                                        <ul>
+                                            <li>Paymaya</li>
+                                            <li>Debit & Credit Card</li>
+                                            <li>Atom A</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How to invest?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <img src="images/invest.jpg" alt="investment" style="width: 400px;"
+                                            class="investment-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How do I get in touch with customer support?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>You can send us an email,</strong> please visit our
+                                        HOMEPAGE and click on the CONTACT US! button. This will take you to a form where
+                                        you
+                                        can fill out your information and send us a message.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Terms & Condition</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-md-start">
+                        <ul>
+                            <li><strong>Payment terms:</strong>
+                                <p>The conditions and timeframes agreed upon for payment of goods or services.</p>
+                            </li>
+                            <li><strong>Delivery terms:</strong>
+                                <p>The conditions and timeframes agreed upon for the delivery of goods or services.</p>
+                            </li>
+                            <li><strong>Returns and refunds: </strong>
+                                <p>The policy governing the return of goods or services by customers and the refund of
+                                    any
+                                    payment made.</p>
+                            </li>
+                            <li><strong>Warranty or guarantee:</strong>
+                                <p> A promise made by a seller or manufacturer to repair or replace a product if it is
+                                    found
+                                    to be faulty within a specified time period.</p>
+                            </li>
+                            <li><strong>Limitation of liability: </strong>
+                                <p> A statement that limits the liability of a business for any damages or losses
+                                    suffered
+                                    by customers as a result of using their products or services.</p>
+                            </li>
+                            <li><strong>Privacy policy: </strong>
+                                <p>A statement outlining how a business collects, uses, and protects the personal
+                                    information of its customers.
+                                </p>
+                            </li>
+                            <li><strong>Intellectual property: </strong>
+                                <p>The ownership rights over creations of the mind, such as inventions, designs, and
+                                    artistic works, including trademarks, patents, and copyrights.</p>
+                            </li>
+                            <p>It's important to carefully read and understand the terms and conditions before making a
+                                purchase.</p>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/articles/send" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-4 cc" style="background-color: rgba(251, 251, 251, 0.06);">
+            © 2023 Copyright:
+            <a class="text-reset text-muted" href="https://www.facebook.com/rolandortizjr/">Roland Ortiz</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

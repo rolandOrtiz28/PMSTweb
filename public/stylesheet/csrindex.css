@@ -36,8 +36,10 @@ body {
 }
 
 .jumbotron1 .static-text1 {
+
     font-size: 60px;
-    color: crimson;
+    color: #5c5c5c;
+    text-shadow: rgb(255, 255, 255) 2px 3px;
     text-transform: uppercase;
 
 }
@@ -75,13 +77,13 @@ body {
 .dynamic-text1 li span::after {
     content: '';
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: 0;
     height: 100%;
     width: 100%;
     background: rgb(110, 173, 255);
-    border-left: 4px solid rgb(110, 173, 255);
-    animation: typing 1.5s steps(15) infinite;
+    border-left: 5px solid rgb(110, 173, 255);
+    animation: typing 1.5s steps(20) infinite;
 
 }
 

@@ -27,7 +27,7 @@
 
         <header>
             <div class="banner-container">
-                <img src="images/pmstbanner.png" alt="">
+                <img src="images/pmstbanner1.png" alt="">
 
             </div>
 
@@ -39,7 +39,7 @@
 
         <div class="card-content">
             <header class="jumbotron">
-                <div class="text-center mt-4 mb-4">
+                <div class="text-center mt-3 mb-2">
                     <h1>Paula Medical Updates</h1>
                     <% if(currentUser){ %>
                         <p>
@@ -53,27 +53,29 @@
                 <div class="row d-flex justify-content-center text-center card-main">
                     <% articles.docs.slice().reverse().forEach(function(article){ %>
                         <div class="card mb-3 ms-4 card-container">
-                            <div class="thumbnail">
-                                <img class="image-fluid mt-2" src="<%= article.images[0].url %>"
-                                    style="width: 100%; height: 300px;">
-                                <div class="card-title mt-4 ">
-                                    <h4>
-                                        <%= article.title %>
-                                    </h4>
-                                </div>
-                                <p class="card-text">
-                                    <small class="text-muted">
-                                        Published: <%= article.createdAt.toLocaleDateString()%>
-                                    </small>
-                                </p>
-                                <p class="card-text">
-                                    <%= article.subDescription %>....
-                                </p>
-                                <p>
-                                    <a href="/articles/<%=article._id%>" class="btn btn-primary">More
-                                        Info</a>
-                                </p>
+
+                            <div style="height: 300px;width: 100%;">
+                                <img class="image-fluid h-100 w-100" src="<%= article.images[0].url %>"
+                                    style="object-fit: cover;">
                             </div>
+                            <div class="card-title mt-4 ">
+                                <h4>
+                                    <%= article.title %>
+                                </h4>
+                            </div>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Published: <%= article.createdAt.toLocaleDateString()%>
+                                </small>
+                            </p>
+                            <small class="card-text mb-2">
+                                <%= article.subDescription %>....
+                            </small>
+                            <p>
+                                <a href="/articles/<%=article._id%>" class="btn btn-primary">More
+                                    Info</a>
+                            </p>
+
 
                         </div>
 

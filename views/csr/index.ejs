@@ -59,28 +59,30 @@
                                         <% csrs.docs.slice().reverse().forEach(function(csr){ %>
                                             <% if (counter <=3){ %>
                                                 <div class="card mb-3 ms-4 card-container">
-                                                    <div class="thumbnail">
-                                                        <img class="image-fluid mt-2"
-                                                            src="https://images.unsplash.com/photo-1585421514738-01798e348b17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1lZGljYWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                                                            style=" width: 100%; height: 400px;">
-                                                        <div class="caption mt-4" data-title>
-                                                            <h4>
-                                                                <%= csr.title %>
-                                                            </h4>
-                                                        </div>
-                                                        <p class="card-text">
-                                                            <small class="text-muted">
-                                                                Published: <%= csr.createdAt.toLocaleDateString()%>
-                                                            </small>
-                                                        </p>
-                                                        <p class="card-text">
-                                                            <%= csr.subDescription %>....
-                                                        </p>
-                                                        <p>
-                                                            <a href="/csr/<%=csr._id%>" class="btn btn-secondary">View
-                                                                Gallery</a>
-                                                        </p>
+
+                                                    <div style="height: 300px;">
+                                                        <img class="image-fluid h-100 w-100"
+                                                            src="<%= article.images[0].url %>"
+                                                            style="object-fit: cover;">
                                                     </div>
+                                                    <div class="caption mt-4" data-title>
+                                                        <h4>
+                                                            <%= csr.title %>
+                                                        </h4>
+                                                    </div>
+                                                    <p class="card-text">
+                                                        <small class="text-muted">
+                                                            Published: <%= csr.createdAt.toLocaleDateString()%>
+                                                        </small>
+                                                    </p>
+                                                    <p class="card-text">
+                                                        <%= csr.subDescription %>....
+                                                    </p>
+                                                    <p>
+                                                        <a href="/csr/<%=csr._id%>" class="btn btn-secondary">View
+                                                            Gallery</a>
+                                                    </p>
+
 
                                                 </div>
                                                 <% counter++ %>

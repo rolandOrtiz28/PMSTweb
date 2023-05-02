@@ -100,7 +100,7 @@ body {
 
 }
 
-.product-card .info h1 {
+.product-card .info h2 {
     font-weight: 900;
 }
 
@@ -151,7 +151,10 @@ body {
     background-color: #0c3cfb4b;
 }
 
-/* .btn1:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-} */
+
+@media only screen and (max-width: 768px) {
+    .product-section {
+        height: 1500px;
+        overflow: scroll;
+    }
+}
