@@ -214,7 +214,11 @@ body {
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
+    .service-container {
+        width: 80%;
+    }
+
     .right-container {
         margin-left: 10%;
     }
@@ -224,11 +228,11 @@ body {
     }
 
     .right-container img {
-        right: 95%;
+        right: 100%;
     }
 
     .left-container img {
-        left: -5%;
+        left: -15%;
 
     }
 }
