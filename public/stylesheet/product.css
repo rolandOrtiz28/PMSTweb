@@ -157,4 +157,11 @@ body {
         height: 1500px;
         overflow: scroll;
     }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

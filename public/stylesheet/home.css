@@ -311,6 +311,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .product-section .product-container h1 {
+        font-size: 50px;
+    }
 
     .home-content {
         flex-direction: column;
