@@ -40,7 +40,7 @@ body {
     left: 50%;
     margin-left: -3px;
     z-index: -1;
-    animation: moving 5.5s linear forwards;
+    animation: moving 5s linear forwards;
 }
 
 @keyframes moving {
@@ -61,12 +61,12 @@ body {
     padding: 10px;
     /* position: relative; */
     /* width: 100%; */
-    animation: move 1s linear forwards;
-    opacity: 0;
+    /* animation: move 1s linear forwards; */
+    opacity: 1;
 
 }
 
-@keyframes move {
+/* @keyframes move {
     0% {
         opacity: 1;
         transform: translateY(-30px);
@@ -96,7 +96,7 @@ body {
 
 .service-container:nth-child(5) {
     animation-delay: 4s;
-}
+} */
 
 .timeline .service-content {
     width: 100%;
@@ -110,9 +110,9 @@ body {
     text-align: center;
     font-size: 80px;
     padding-top: 5rem;
-    color: white;
+    color: #5c5c5c;
     text-transform: uppercase;
-    text-shadow: rgb(255, 176, 176) 3px 0 20px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00005a, 0 0 70px #ff00005a, 0 0 80px #ff00005a, 0 0 100px #ff00005a, 0 0 150px #ff00005a;
     letter-spacing: 8px;
     padding-bottom: 3rem;
 
@@ -190,8 +190,12 @@ body {
 
 
 @media screen and (max-width: 40rem) {
+    .title {
+        font-size: 40px;
+    }
+
     .timeline {
-        margin: 50px auto;
+        margin: 100px auto;
         background: none;
         backdrop-filter: 0;
         -webkit-backdrop-filter: 0;
@@ -199,7 +203,8 @@ body {
 
     .timeline::after {
         left: 10px;
-        margin-top: 2rem;
+        top: 210px;
+        /* margin-top: 1rem; */
     }
 
     .text-box {
@@ -222,11 +227,11 @@ body {
     }
 
     .right-container img {
-        margin-left: 0;
+        right: 90%;
     }
 
     .left-container img {
-        margin-left: -85%;
+        left: 0;
 
     }
 

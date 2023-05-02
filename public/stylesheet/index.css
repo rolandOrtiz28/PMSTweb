@@ -34,7 +34,7 @@ body {
 .jumbotron h1 {
     font-size: 80px;
     color: #5c5c5c;
-    text-shadow: rgb(255, 255, 255) 2px 5px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #ff00005a, 0 0 150px #ff00005a;
     animation: slidein .8s linear 1s infinite alternate;
 }
 
