@@ -27,7 +27,7 @@ router.post('/register', catchAsync(async (req, res) => {
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
         if (!passwordRegex.test(password)) {
             req.flash('error', 'Password must contain at least one uppercase letter, one digit, and be at least 8 characters long');
-            res.redirect('/pmstregistrationform');
+            res.redirect('/registration/:url');
             return;
         }
 
@@ -37,7 +37,7 @@ router.post('/register', catchAsync(async (req, res) => {
         res.redirect('/articles');
     } catch (e) {
         req.flash('error', e.message);
-        res.redirect('/pmstregistrationform');
+        res.redirect('/registration/:url');
     }
 }));
 

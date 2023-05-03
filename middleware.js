@@ -113,8 +113,8 @@ module.exports.sendEmailReg = async (req, res, next) => {
             pass: process.env.JWT_PASS,
             route: process.env.ADMIN_ROUTE,
         };
-        const token = jwt.sign(payload, secret, { expiresIn: "15m" });
-        const link = `http://${req.headers.host}/adminLogin/${token}`;
+        const token = jwt.sign(payload, secret, { expiresIn: "360s" });
+        const link = `http://${req.headers.host}/registration/${token}`;
         const mailOptions = {
             from: process.env.GMAIL_EMAIL,
             to: process.env.GMAIL_EMAIL,
