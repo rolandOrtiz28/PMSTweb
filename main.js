@@ -18,6 +18,7 @@ const helmet = require('helmet')
 const MongoDBStore = require("connect-mongo");
 
 
+
 const articleRoute = require('./routes/article');
 const userRoute = require('./routes/user');
 const serviceRoute = require('./routes/Services');
@@ -164,6 +165,7 @@ app.use((req, res, next) => {
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     next();
+
 })
 
 

@@ -215,7 +215,8 @@ section .button {
 }
 
 .container-fluid img {
-    width: 750px;
+    max-width: 750px;
+    max-height: 700px;
 }
 
 @media only screen and (max-width: 768px) {

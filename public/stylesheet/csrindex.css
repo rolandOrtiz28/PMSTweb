@@ -99,7 +99,7 @@ body {
 
 .card-content {
     /* margin-top: 25%; */
-    /* width: 100%; */
+    width: 100%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://media.istockphoto.com/id/1271118750/photo/hands-holding-a-red-heart-on-blue-background-csr-or-corporate-social-responsibility-health.jpg?s=612x612&w=0&k=20&c=wC4AcpzjHvbkZhq5jl9IRukoqPWTUI3dN_ZQZ1FPg7w=");
     background-attachment: fixed;
     background-size: cover;
@@ -108,11 +108,11 @@ body {
 }
 
 
+
 .card-main {
-    display: inline-block;
+    display: flex;
     flex-wrap: wrap;
-    padding: 0 15vh;
-    position: relative;
+    padding: 0 10vh;
 
 
 }
@@ -124,6 +124,7 @@ body {
     -webkit-backdrop-filter: blur(15px);
     max-width: 300px;
     margin-top: 5rem;
+    padding: 10px;
 }
 
 .pagination {
@@ -176,6 +177,37 @@ body {
         height: 200px;
     }
 
+    .card-title {
+        font-size: 10px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .jumbotron h1 {
+        font-size: 45px;
+    }
+
+    .banner-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        top: -36px;
+        white-space: nowrap;
+
+    }
+
+    .banner-container img {
+        height: 250px;
+
+    }
+
+    .body1 {
+        position: relative;
+        width: 100%;
+        top: -70px;
+    }
 
 
 }

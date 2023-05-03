@@ -28,31 +28,32 @@
             </div>
             </header>
 
-            <%- include('../partials/flash') %>
-                <!-- content section -->
-                <div class="card-content">
-                    <div class="body1">
-                        <header class="jumbotron1">
-                            <div class="static-text1">Paula Medical is</div>
-                            <ul class="dynamic-text1">
-                                <li><span>Reliable</span></li>
-                                <li><span>Professional</span></li>
-                                <li><span>Trustworthy</span></li>
-                                <li><span>Efficient</span></li>
-                            </ul>
 
-                        </header>
+            <!-- content section -->
+            <div class="card-content">
+                <div class="body1">
+                    <header class="jumbotron1">
+                        <div class="static-text1">Paula Medical is</div>
+                        <ul class="dynamic-text1">
+                            <li><span>Reliable</span></li>
+                            <li><span>Professional</span></li>
+                            <li><span>Trustworthy</span></li>
+                            <li><span>Efficient</span></li>
+                        </ul>
 
-                    </div>
+                    </header>
+
+                </div>
 
 
-                    <div class="content">
-                        <% if(currentUser){ %>
-                            <p>
-                                <a class="btn btn-primary btn-large mt-3" href="/csr/new">Add new
-                                    Gallery</a>
-                            </p>
-                            <% } %>
+                <div class="content">
+                    <% if(currentUser){ %>
+                        <p>
+                            <a class="btn btn-primary btn-large mt-3" href="/csr/new">Add new
+                                Gallery</a>
+                        </p>
+                        <% } %>
+                            <%- include('../partials/flash') %>
                                 <div class="row d-flex justify-content-center text-center card-main">
                                     <% var counter=0; %>
 
@@ -60,11 +61,11 @@
                                             <% if (counter <=3){ %>
                                                 <div class="card mb-3 ms-4 card-container">
 
-                                                    <div style="height: 300px;">
+                                                    <div style="height: 300px;width: 100%;">
                                                         <img class="image-fluid h-100 w-100"
                                                             src="<%= csr.images[0].url %>" style="object-fit: cover;">
                                                     </div>
-                                                    <div class="caption mt-4" data-title>
+                                                    <div class="card-title mt-4 " data-title>
                                                         <h4>
                                                             <%= csr.title %>
                                                         </h4>
@@ -74,9 +75,9 @@
                                                             Published: <%= csr.createdAt.toLocaleDateString()%>
                                                         </small>
                                                     </p>
-                                                    <p class="card-text">
+                                                    <small class="card-text mb-2">
                                                         <%= csr.subDescription %>....
-                                                    </p>
+                                                    </small>
                                                     <p>
                                                         <a href="/csr/<%=csr._id%>" class="btn btn-secondary">View
                                                             Gallery</a>
@@ -113,15 +114,15 @@
                                                             <% } %>
                                     </ul>
                                 </nav>
-                    </div>
-
-                    <%- include('../partials/footer') %>
                 </div>
 
-                <!-- script section -->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                    crossorigin="anonymous"></script>
+                <%- include('../partials/footer') %>
+            </div>
+
+            <!-- script section -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
     </body>
 
 

@@ -17,6 +17,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
+
 </head>
 
 
@@ -42,112 +43,104 @@
                 </div>
             </header>
             <%- include('../partials/flash') %>
+
                 <div class="row d-flex justify-content-center text-center card-main">
-                    <% articles.docs.slice().reverse().forEach(function(article){ %>
-                        <div class="card mb-3 ms-4 card-container">
+                    <% var counter=0; %>
+                        <% articles.docs.slice().reverse().forEach(function(article){ %>
+                            <% if (counter <=5){ %>
+                                <div class="card mb-3 ms-4 card-container">
+                                    <div style="height: 300px;width: 100%;">
+                                        <img class="image-fluid h-100 w-100" src="<%= article.images[0].url %>"
+                                            style="object-fit:cover;">
+                                    </div>
+                                    <div class="card-title mt-4">
+                                        <h4>
+                                            <%= article.title %>
+                                        </h4>
+                                    </div>
+                                    <p class="card-text">
+                                        <small class="text-muted">
+                                            Published: <%= article.createdAt.toLocaleDateString()%>
+                                        </small>
+                                    </p>
+                                    <small class="card-text mb-2">
+                                        <%= article.subDescription %>....
+                                    </small>
+                                    <p>
+                                        <a href="/articles/<%=article._id%>" class="btn btn-primary">More
+                                            Info</a>
+                                    </p>
 
-                            <div style="height: 300px;width: 100%;">
-                                <img class="image-fluid h-100 w-100" src="<%= article.images[0].url %>"
-                                    style="object-fit: cover;">
-                            </div>
-                            <div class="card-title mt-4">
-                                <h4>
-                                    <%= article.title %>
-                                </h4>
-                            </div>
-                            <p class="card-text">
-                                <small class="text-muted">
-                                    Published: <%= article.createdAt.toLocaleDateString()%>
-                                </small>
-                            </p>
-                            <small class="card-text mb-2">
-                                <%= article.subDescription %>....
-                            </small>
-                            <p>
-                                <a href="/articles/<%=article._id%>" class="btn btn-primary">More
-                                    Info</a>
-                            </p>
 
+                                </div>
 
-                        </div>
-
-                        <% }); %>
-                </div>
-
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                        <% if (articles.hasPrevPage) { %>
-                            <li class="page-item">
-                                <a class="page-link"
-                                    href="?page=<%= articles.prevPage %>&pageSize=<%= articles.limit %>">&laquo;</a>
-                            </li>
-                            <% } %>
-                                <% for (let i=1; i <=articles.totalPages; i++) { %>
-                                    <li class="page-item <%= i === articles.page ? 'active' : '' %>">
-                                        <a class="page-link" href="?page=<%= i %>&pageSize=<%= articles.limit %>">
-                                            <%= i %>
-                                        </a>
-                                    </li>
+                                <% counter++ %>
                                     <% } %>
-                                        <% if (articles.hasNextPage) { %>
-                                            <li class="page-item">
-                                                <a class="page-link"
-                                                    href="?page=<%= articles.nextPage %>&pageSize=<%= articles.limit %>">&raquo;</a>
-                                            </li>
-                                            <% } %>
-                    </ul>
-                </nav>
-
-
-
-
-                <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="/articles/send" method="POST">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="subject" class="form-label">Subject</label>
-                                        <input type="text" class="form-control" id="subject" name="subject" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="3"
-                                            required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Send</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                                        <% }); %>
                 </div>
-
-                <%- include('../partials/footer') %>
         </div>
 
 
 
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <% if (articles.hasPrevPage) { %>
+                    <li class="page-item">
+                        <a class="page-link"
+                            href="?page=<%= articles.prevPage %>&pageSize=<%= articles.limit %>">&laquo;</a>
+                    </li>
+                    <% } %>
+                        <% for (let i=1; i <=articles.totalPages; i++) { %>
+                            <li class="page-item <%= i === articles.page ? 'active' : '' %>">
+                                <a class="page-link" href="?page=<%= i %>&pageSize=<%= articles.limit %>">
+                                    <%= i %>
+                                </a>
+                            </li>
+                            <% } %>
+                                <% if (articles.hasNextPage) { %>
+                                    <li class="page-item">
+                                        <a class="page-link"
+                                            href="?page=<%= articles.nextPage %>&pageSize=<%= articles.limit %>">&raquo;</a>
+                                    </li>
+                                    <% } %>
+            </ul>
+        </nav>
+
+
+
+        <%- include('../partials/footer') %>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script>
+                var mq = window.matchMedia("(max-width: 768px)");
+
+                function handleMatchMedia(mq) {
+                    if (mq.matches) {
+                        $('#article-carousel').carousel({
+                            interval: 2000 // set the interval to your preference
+                        });
+                    } else {
+                        $('#article-carousel').carousel('pause');
+                    }
+                }
+                $(document).ready(function () {
+                    if ($(window).width() < 768) {
+                        $('.carousel').carousel();
+                    }
+                });
+
+                handleMatchMedia(mq); // call the function once when the page loads
+
+                mq.addListener(handleMatchMedia); // call the function when the media query changes
+
+            </script>
 
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
 
     </body>
 

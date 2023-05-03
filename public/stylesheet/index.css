@@ -75,8 +75,10 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     max-width: 300px;
+    padding: 10px;
 
 }
+
 
 
 
@@ -131,8 +133,42 @@ header .contact:hover {
 
     }
 
+    .caro {
+        display: flex;
+    }
+
     header {
         border: none;
+    }
+
+    .jumbotron h1 {
+        font-size: 45px;
+    }
+
+    .banner-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        top: -128px;
+        white-space: nowrap;
+
+    }
+
+    .banner-container img {
+        height: 250px;
+
+    }
+
+    .jumbotron {
+        position: relative;
+        width: 100%;
+        top: -200px;
+
+    }
+
+    .card-main {
+        position: relative;
+        top: -150px;
     }
 
     .card-title {
@@ -143,19 +179,10 @@ header .contact:hover {
         font-size: 14px;
     }
 
-    .jumbotron h1 {
-        font-size: 45px;
-    }
 
-    .banner-container {
 
-        height: 200px;
-    }
 
-    .banner-container img {
-        height: 350px;
 
-    }
 }
 
 @media (max-width: 576px) {
