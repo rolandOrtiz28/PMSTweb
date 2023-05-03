@@ -44,6 +44,8 @@
             </header>
             <%- include('../partials/flash') %>
 
+
+
                 <div class="row d-flex justify-content-center text-center card-main">
                     <% var counter=0; %>
                         <% articles.docs.slice().reverse().forEach(function(article){ %>
@@ -110,31 +112,6 @@
 
         <%- include('../partials/footer') %>
             </div>
-            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-            <script>
-                var mq = window.matchMedia("(max-width: 768px)");
-
-                function handleMatchMedia(mq) {
-                    if (mq.matches) {
-                        $('#article-carousel').carousel({
-                            interval: 2000 // set the interval to your preference
-                        });
-                    } else {
-                        $('#article-carousel').carousel('pause');
-                    }
-                }
-                $(document).ready(function () {
-                    if ($(window).width() < 768) {
-                        $('.carousel').carousel();
-                    }
-                });
-
-                handleMatchMedia(mq); // call the function once when the page loads
-
-                mq.addListener(handleMatchMedia); // call the function when the media query changes
-
-            </script>
-
 
 
 
