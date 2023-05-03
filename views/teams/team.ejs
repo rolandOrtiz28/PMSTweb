@@ -13,6 +13,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alkatra&family=Anton&family=Heebo&family=Kanit:ital,wght@1,200&family=Lato&family=Lora:wght@700&family=Montserrat:ital,wght@0,500;1,500&family=Noto+Sans+JP:wght@200&family=Raleway:ital,wght@1,500&family=Roboto+Mono&family=Signika+Negative:wght@500&family=Sofia+Sans+Condensed:wght@200&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/smooth-scrollbar.min.js"></script>
+
 </head>
 
 
@@ -206,15 +210,16 @@
 
             <div class="team">
 
-                <p><strong> Our team </strong>comprises of individuals with diverse expertise, including sales and
-                    marketing, logistics,
-                    procurement, customer service, and administration. Each team member brings valuable experience and
+                <p>Our team comprises of individuals with diverse expertise, including sales and marketing, logistics,
+                    procurement, customer service, and administration.</p>
+                <p>Each team member brings valuable experience and
                     knowledge to the table, making our team well-equipped to serve our customers with
-                    excellence.<br><br>
-                    We are committed to providing the highest quality medical supplies and equipment to our customers,
+                    excellence.</p>
+                <p> We are committed to providing the highest quality medical supplies and equipment to our customers,
                     which
-                    include hospitals, clinics, pharmacies, and other healthcare facilities. Our team is known for its
-                    exceptional customer service, prompt responsiveness, and attention to detail, ensuring that our
+                    include hospitals, clinics, pharmacies, and other healthcare facilities.</p>
+                <p> Our team is known for its exceptional customer service, prompt responsiveness, and attention to
+                    detail, ensuring that our
                     customers' needs are met efficiently and effectively.</p>
             </div>
         </div>
@@ -240,7 +245,23 @@
 
             </script>
 
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+                gsap.from(".team p", {
+                    backgroundPositionX: "0%",
+                    stagger: .5,
 
+                    scrollTrigger: {
+                        trigger: ".team p",
+                        scrub: 1,
+                        start: "20% bottom",
+                        end: "bottom 30%",
+                        markers: true,
+
+                    }
+                });
+
+            </script>
 
 
 </body>

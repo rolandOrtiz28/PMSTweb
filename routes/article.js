@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { validateArticle } = require("../middleware");
+const { validateArticle, isLoggedIn } = require("../middleware");
 const catchAsync = require('../utils/catchAsync');
 const Article = require('../models/article');
 const multer = require('multer');
@@ -50,7 +50,7 @@ router.get('/:id', addLoadingVariable, catchAsync(async (req, res) => {
 
 }))
 
-router.get('/:id/edit', addLoadingVariable, catchAsync(async (req, res) => {
+router.get('/:id/edit', isLoggedIn, addLoadingVariable, catchAsync(async (req, res) => {
     const article = await Article.findById(req.params.id);
     res.render('articles/edit', { article });
 

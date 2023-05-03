@@ -4,7 +4,7 @@ const Csr = require('../models/csr');
 const mongoosePaginate = require('mongoose-paginate-v2');
 const multer = require('multer');
 const catchAsync = require('../utils/catchAsync');
-const { validateCsr } = require('../middleware')
+const { validateCsr, isLoggedIn } = require('../middleware')
 const { storage } = require('../cloudinary');
 const { addLoadingVariable } = require('../middleware')
 const upload = multer({ storage })
@@ -45,7 +45,7 @@ router.get('/:id', catchAsync(async (req, res) => {
     res.render('csr/show', { csr })
 }))
 
-router.get('/:id/edit', addLoadingVariable, catchAsync(async (req, res) => {
+router.get('/:id/edit', isLoggedIn, addLoadingVariable, catchAsync(async (req, res) => {
     const csr = await Csr.findById(req.params.id);
     res.render('csr/edit', { csr });
 }));

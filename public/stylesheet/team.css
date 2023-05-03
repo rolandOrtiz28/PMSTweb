@@ -31,21 +31,28 @@ body {
     font-weight: 700;
     line-height: 50px;
     color: #5c5c5c;
-    text-shadow: rgb(255, 255, 255) 2px 5px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00005a, 0 0 70px #ff00005a, 0 0 80px #ff00005a, 0 0 100px #ff00005a, 0 0 150px #ff00005a;
     letter-spacing: 5px;
     margin: 30px 0;
 }
 
+.team {
+    margin-bottom: 10rem;
+}
 
 
-.team p {
+.team>p {
     width: 80%;
-    text-align: justify;
-    font-size: 15px;
-    font-weight: 150;
-    line-height: 23px;
-    color: #666666;
-    letter-spacing: 2px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 350;
+    line-height: 40px;
+    background: linear-gradient(to right, rgb(255, 255, 255)50%, rgb(37, 37, 37)50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 
 }
 
@@ -253,14 +260,14 @@ body {
 
 
 @media (max-width: 768px) {
-    .team h1 {
-        font-size: 2rem;
+    .main h1 {
+        font-size: 2.5rem;
     }
 
-    .team p {
-        width: auto;
-        font-size: 10px;
-        line-height: 14px;
+    .team>p {
+        width: 80%;
+        font-size: 20px;
+        line-height: 20px;
     }
 
     .container1 {

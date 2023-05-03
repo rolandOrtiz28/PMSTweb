@@ -4,8 +4,16 @@ const ExpressError = require('./utils/ExpressError');
 const Csr = require('./models/csr')
 const Article = require('./models/article');
 const nodemailer = require('nodemailer')
+const jwt = require('jsonwebtoken');
+const User = require('./models/user.js')
 
-
+module.exports.isLoggedIn = (req, res, next) => {
+    if (!req.isAuthenticated()) {
+        req.session.gobackTo = req.originalUrl
+        return res.redirect('/')
+    }
+    next();
+}
 
 
 
@@ -52,7 +60,7 @@ module.exports.addLoadingVariable = (req, res, next) => {
 
 
 
-module.exports.sendEmail = (req, res, next) => {
+module.exports.sendEmail = async (req, res, next) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -60,54 +68,71 @@ module.exports.sendEmail = (req, res, next) => {
             pass: process.env.GMAIL_PASSWORD,
         }
     });
-    const url = Math.floor(Math.random(10) * 10000) + process.env.ADMIN_ROUTE;
-    const link = `http://${req.headers.host}/adminLogin/${url}`;
 
-    const mailOptions = {
-        from: process.env.GMAIL_EMAIL,
-        to: process.env.GMAIL_EMAIL,
-        subject: 'Login attempt',
-        html: `A user is trying to log in, If it is you click this link to continue logging in ${link}`
-    };
+    try {
+        const secret = process.env.JWT_PASS + process.env.ADMIN_ROUTE;
+        const payload = {
+            pass: process.env.JWT_PASS,
+            route: process.env.ADMIN_ROUTE,
+        };
+        const token = jwt.sign(payload, secret, { expiresIn: "15m" });
+        const link = `http://${req.headers.host}/adminLogin/${token}`;
+        const mailOptions = {
+            from: process.env.GMAIL_EMAIL,
+            to: process.env.GMAIL_EMAIL,
+            subject: "Login attempt",
+            html: `A user is trying to Login, If it is you click this link to continue logging in ${link}`,
+        };
 
-    transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Internal server error');
-        } else {
-            console.log(`Email sent: ${info.response}`);
-            next();
-        }
-    });
-}
+        transporter.sendMail(mailOptions, (err, info) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send("Internal server error");
+            } else {
+                next();
+            }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Internal server error");
+    }
+};
 
-module.exports.sendEmailReg = (req, res, next) => {
+module.exports.sendEmailReg = async (req, res, next) => {
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: "gmail",
         auth: {
             user: process.env.GMAIL_EMAIL,
             pass: process.env.GMAIL_PASSWORD,
-        }
+        },
     });
-    const url = Math.floor(Math.random(10) * 10000) + process.env.ADMIN_ROUTE;
-    const link = `http://${req.headers.host}/registration/${url}`;
 
-    const mailOptions = {
-        from: process.env.GMAIL_EMAIL,
-        to: process.env.GMAIL_EMAIL,
-        subject: 'Login attempt',
-        html: `A user is trying to register, If it is you click this link to continue logging in ${link}`
-    };
+    try {
+        const secret = process.env.JWT_PASS + process.env.ADMIN_ROUTE;
+        const payload = {
+            pass: process.env.JWT_PASS,
+            route: process.env.ADMIN_ROUTE,
+        };
+        const token = jwt.sign(payload, secret, { expiresIn: "15m" });
+        const link = `http://${req.headers.host}/adminLogin/${token}`;
+        const mailOptions = {
+            from: process.env.GMAIL_EMAIL,
+            to: process.env.GMAIL_EMAIL,
+            subject: "Register attempt",
+            html: `A user is trying to register, If it is you click this link to continue logging in ${link}`,
+        };
 
-    transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Internal server error');
-        } else {
-            console.log(`Email sent: ${info.response}`);
-            next();
-        }
-    });
-}
-
+        transporter.sendMail(mailOptions, (err, info) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send("Internal server error");
+            } else {
+                next();
+            }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Internal server error");
+    }
+};
 
